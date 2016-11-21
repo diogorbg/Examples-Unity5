@@ -11,7 +11,7 @@ public class Player : MonoBehaviour {
 
 	// Use Start para inicializações
 	void Start () {
-		// Obtains the physics component
+		// Obtem o componente de física
 		rigb = GetComponent<Rigidbody>();
 	}
 	
