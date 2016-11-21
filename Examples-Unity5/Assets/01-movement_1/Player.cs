@@ -9,24 +9,24 @@ public class Player : MonoBehaviour {
 
 	private Rigidbody rigb;
 
-	// Use this for initialization
+	// Use Start para inicializações
 	void Start () {
 		// Obtains the physics component
 		rigb = GetComponent<Rigidbody>();
 	}
 	
-	// Update is called once per frame
+	// Update é executado um vez por frame
 	void Update () {
-		// Receive keyboard/joypad movement
+		// Recebe o movimento do keyboard/joypad
 		Vector3 mov = Vector2.zero;
 		mov.x = Input.GetAxis("Horizontal");
 		mov.z = Input.GetAxis("Vertical");
 		mov.Normalize();
 
-		// Do not use transform.position to move ... use rigidbody.velocity
+		// Não use transform.position para mover ... use rigidbody.velocity
 		rigb.velocity = mov * velocity;
 
-		// Motion test
+		// Teste de Movimento
 		if (mov.magnitude >= 0.01f) {
 			transform.LookAt(transform.position + mov);
 		}
