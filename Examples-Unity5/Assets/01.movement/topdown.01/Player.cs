@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace movement_1 {
+namespace topdown_01 {
 
 public class Player : MonoBehaviour {
 
@@ -18,7 +18,7 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		// Receive keyboard/joypad movement
-		Vector3 mov = Vector2.zero;
+		Vector3 mov = Vector3.zero;
 		mov.x = Input.GetAxis("Horizontal");
 		mov.z = Input.GetAxis("Vertical");
 		mov.Normalize();
