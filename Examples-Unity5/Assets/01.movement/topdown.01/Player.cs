@@ -23,7 +23,7 @@ public class Player : MonoBehaviour {
 		mov.z = Input.GetAxis("Vertical");
 		mov.Normalize();
 
-		// Não use transform.position para mover ... use rigidbody.velocity
+		// Não use transform.position para mover... use rigidbody.velocity
 		rigb.velocity = mov * velocity;
 
 		// Teste de Movimento
