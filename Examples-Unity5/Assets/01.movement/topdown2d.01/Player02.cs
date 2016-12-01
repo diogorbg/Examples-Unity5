@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace topdown2d_01 {
-
-public class Player : MonoBehaviour {
+public class Player02 : MonoBehaviour {
 
 	public float velocity = 5f;
 
@@ -31,6 +29,4 @@ public class Player : MonoBehaviour {
 			transform.LookAt(transform.position + mov, Vector3.back);
 		}
 	}
-}
-
 }
