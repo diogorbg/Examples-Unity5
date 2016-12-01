@@ -1,26 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace topdown2d_01 {
-
-public class Player : MonoBehaviour {
+public class Player01 : MonoBehaviour {
 
 	public float velocity = 5f;
 
-	private Rigidbody2D rigb;
+	private Rigidbody rigb;
 
 	// Use Start para inicializações
 	void Start () {
 		// Obtem o componente de física
-		rigb = GetComponent<Rigidbody2D>();
+		rigb = GetComponent<Rigidbody>();
 	}
 	
 	// Update é executado um vez por frame
 	void Update () {
 		// Recebe o movimento do keyboard/joypad
-		Vector3 mov = Vector3.zero;
+		Vector3 mov = Vector2.zero;
 		mov.x = Input.GetAxis("Horizontal");
-		mov.y = Input.GetAxis("Vertical");
+		mov.z = Input.GetAxis("Vertical");
 		mov.Normalize();
 
 		// Não use transform.position para mover... use rigidbody.velocity
@@ -28,9 +26,7 @@ public class Player : MonoBehaviour {
 
 		// Teste de Movimento
 		if (mov.magnitude >= 0.01f) {
-			transform.LookAt(transform.position + mov, Vector3.back);
+			transform.LookAt(transform.position + mov);
 		}
 	}
-}
-
 }
