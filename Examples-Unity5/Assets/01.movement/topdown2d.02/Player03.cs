@@ -7,24 +7,24 @@ public class Player03 : MonoBehaviour {
 
 	private Rigidbody2D rigb;
 
-	// Use this for initialization
+	// Use Start para inicializações
 	void Start () {
-		// Obtains the physics component
+		// Obtem o componente de física
 		rigb = GetComponent<Rigidbody2D>();
 	}
 	
-	// Update is called once per frame
+	// Update é executado um vez por frame
 	void Update () {
-		// Receive keyboard/joypad movement
+		// Recebe o movimento do keyboard/joypad
 		Vector3 mov = Vector3.zero;
 		mov.x = Input.GetAxis("Horizontal");
 		mov.y = Input.GetAxis("Vertical");
 		mov.Normalize();
 
-		// Do not use transform.position to move ... use rigidbody.velocity
+		// Não use transform.position para mover... use rigidbody.velocity
 		rigb.velocity = mov * velocity;
 
-		// Motion test
+		// Teste de Movimento
 		if (mov.magnitude >= 0.01f) {
 			transform.LookAt(transform.position + mov, Vector3.back);
 		}
