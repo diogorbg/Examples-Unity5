@@ -1,0 +1,5 @@
+Name: Simple Character (rigged)
+Author: SebastianL.
+Premalink: http://www.blendswap.com/blends/view/77613.
+
+A simple, low poly character with rig, texture and a little walk animation. This character is the result from my tutorial series: Basics of Blender Character Creation.
